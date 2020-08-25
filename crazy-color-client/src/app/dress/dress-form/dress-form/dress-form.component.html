@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-6 justify-content-center">
+        <form [formGroup]="dressForm">
+            <label for="">Dress</label>
+            
+            <div class="form-group">
+                <label for="">Dress Name</label>
+                <input type="text" class="form-control" formControlName="name"></div>
+            <div class="form-group">
+                <label for="">Color</label>
+                <input type="text" class="form-control" formControlName="color"></div>
+           
+                <div class="form-group">
+                    <label for="">Size</label>
+                    <input type="text" class="form-control" formControlName="size"></div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input type="text" class="form-control" formControlName="price"></div>
+                <div class="form-group">
+                    <button class="btn btn-block btn-primary" (click)="save()">Save For Dress</button></div>
+        </form>
+    </div>
+</div>
