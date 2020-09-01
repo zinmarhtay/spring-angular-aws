@@ -2,6 +2,7 @@ package com.jdc.crazycolor.model;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,6 +31,11 @@ public abstract class BaseApi<T,ID> {
 	@PutMapping
 	public T update(@RequestBody T t) {
 		return service().save(t);
+	}
+	
+	@DeleteMapping("{id:\\d+}")
+	public void delete(@PathVariable ID id) {
+		service().delete(id);
 	}
 	
 	

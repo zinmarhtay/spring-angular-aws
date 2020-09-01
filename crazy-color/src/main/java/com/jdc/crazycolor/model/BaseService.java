@@ -19,4 +19,8 @@ public abstract class BaseService<T, ID> {
 	public T save(T t) {
 		 return repo().save(t);
 	}
+	
+	public void delete(ID id) {
+		repo().deleteById(id);
+	}
 }

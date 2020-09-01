@@ -9,8 +9,6 @@ import { Dress } from '../dto/dress';
 export class DressComponent implements OnInit {
 
   constructor() { }
-  @Input()
-  dresses :Dress[];
   ngOnInit(): void {
   }
 
